@@ -1,0 +1,5 @@
+백엔드 웹프레임워크를 Express프레임워크로 바꿔서
+
+명령프롬포트 관리자권한 실행
+routes.js파일이 있는 곳으로 이동 > npm init 한뒤 설정(없으면 엔터) >
+npm install express -save > node routes.js > 127.0.0.1:8000 웹에서 실행

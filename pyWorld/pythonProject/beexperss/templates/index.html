@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- 문서의 속성을 기술, 인코딩방식을 설정, 제목정함 -->
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text"></h1> <!-- 다른 id값을 줘서 구분 -->
+</body>
+<!-- index.js라는 파일을 가져옴 -->
+<script type="text/javascript" src="static/js/index.js"></script>
+<script>
+    let text = document.getElementById('text'); <!-- id를 가져옴 -->
+    let msgPrms = getMessage(); <!-- getMessage()를 호출해 메시지 데이터를 가져옴 -->
+    msgPrms.then((message) => { <!-- 반환값은 서버로부터 응답이 도작하야 전달됨, then()안에 수행할 작업 기술, id를 받는 함수안에 메시지 데이터 넣음 -->
+        text.innerHTML = message;
+    }).catch((error) => { <!-- 작업실패시 나오는 오류내용 출력 -->
+    console.log('[Error]msgPrms:', error);
+    });
+</script>
+</html>
